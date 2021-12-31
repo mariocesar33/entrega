@@ -26,5 +26,13 @@ export class CreateClient {
     const hashPassaword = await hash(password, 10);
 
     // Salvar o cliete no banco de dados
+    const client = await prisma.clients.create({
+      data: {
+        username,
+        password: hashPassaword,
+      }
+    });
+
+    return client;
   }
 }
