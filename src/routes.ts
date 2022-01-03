@@ -6,6 +6,6 @@ const routes = Router();
 
 const createClientController =  new CreateClientController();
 
-routes.post("/client", createClientController.handle);
+routes.post("/client/", createClientController.handle);
 
 export { routes };
