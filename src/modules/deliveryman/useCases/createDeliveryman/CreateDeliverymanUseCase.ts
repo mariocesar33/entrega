@@ -9,7 +9,7 @@ interface ICreateDeliveryman {
 
 export class CreateDeliverymanUseCase {
   async execute({username, password}: ICreateDeliveryman) {
-    // Validar se o deliveryman existe
+    // Verificar se o deliveryman existe
     const deliverymanExist = await prisma.deliveryman.findFirst({
       where: {
         username: {
