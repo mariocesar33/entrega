@@ -7,10 +7,10 @@ import { CreateDeliverymanController } from "./modules/deliveryman/useCases/crea
 
 const routes = Router();
 
-const createClientController =  new CreateClientController();
+const createClientController = new CreateClientController();
 const authenticateClientController = new AuthenticateClientController();
 const authenticateDeliverymanController = new AuthenticateDeliverymanController();
-const createDeliverymentController  = new CreateDeliverymanController();
+const createDeliverymentController = new CreateDeliverymanController();
 
 routes.post("/client/authenticate", authenticateClientController.handle);
 routes.post("/deliveryman/authenticate", authenticateDeliverymanController.handle);
