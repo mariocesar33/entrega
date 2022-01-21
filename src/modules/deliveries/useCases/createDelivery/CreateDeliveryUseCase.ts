@@ -13,5 +13,7 @@ export class CreateDeliveryUseCase {
         id_client,
       }
     });
+
+    return delivery;
   }
 }
