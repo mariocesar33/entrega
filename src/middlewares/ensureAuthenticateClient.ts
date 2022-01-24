@@ -1,6 +1,10 @@
 import { Request, Response, NextFunction } from "express";
 import { verify } from "jsonwebtoken";
 
+interface IPayload {
+  sub: string;
+}
+
 export async function ensureAuthenticateClient(
   request: Request, 
   response: Response, 
@@ -25,9 +29,13 @@ export async function ensureAuthenticateClient(
 
   // Agora vamos validar se é um token valido
   try {
-    const { sub } = verify(token, "1c0c5c598fd0f946bf8fd82183e1a0b0");
+    const { sub } = verify(
+      token, 
+      "1c0c5c598fd0f946bf8fd82183e1a0b0"
+    ) as IPayload;
 
-    console.log(sub);
+    request.id_client = sub
+    
     return next();
   } catch(err) {
     return response.status(401).json({
