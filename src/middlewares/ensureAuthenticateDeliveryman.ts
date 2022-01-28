@@ -19,7 +19,7 @@ export async function ensureAuthenticateDeliveryman(
   const [, token] = authHearder.split(" ");
 
   try {
-    const { sub } = verify(token, "1c0c5c598fd0f946bf8fd82183e1a0b0") as IPayload;
+    const { sub } = verify(token, "1c0c5c598fd0f856bf8fd82183e1a0bd") as IPayload;
 
     request.id_deliveryman = sub;
     return next();

@@ -31,7 +31,7 @@ export class AuthenticateClientUseCase {
     }
 
     // Gerar o token
-    const token = sign({username}, "1c0c5c598fd0f946bf8fd82183e1a0b0", {
+    const token = sign({username}, "1c0c5c598fd0f946bf8fd82183e1a0bc", {
       subject: client.id,
       expiresIn: "1d"
     });
