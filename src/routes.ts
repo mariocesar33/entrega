@@ -9,7 +9,6 @@ import { FindAllAvailableController } from "./modules/deliveries/useCases/findAl
 
 import { ensureAuthenticateClient } from "./middlewares/ensureAuthenticateClient";
 
-
 const routes = Router();
 
 const createClientController = new CreateClientController();
