@@ -10,7 +10,7 @@ export class FindAllDeliveriesUseCase {
     //   where: {
     //     id_client: id_client,
     //   }
-    // });    ou
+    // });
 
     const deliveries  = await prisma.clients.findMany({
       where: {
@@ -21,6 +21,6 @@ export class FindAllDeliveriesUseCase {
       }
     });
 
-    return deliveries
+    return deliveries;
   }
 }
