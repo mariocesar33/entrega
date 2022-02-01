@@ -13,7 +13,7 @@ model Deliveryman {
   password String
 
   @@map("deliveryman")
-  Deliveries Deliveries[]
+  deliveries Deliveries[]
 }
 
 model Clients {
@@ -22,7 +22,7 @@ model Clients {
   password String
 
   @@map("clients")
-  Deliveries Deliveries[]
+  deliveries Deliveries[]
 }
 
 model Deliveries {
