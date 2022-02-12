@@ -13,7 +13,7 @@ export class CreateClient {
     const clientExist = await prisma.clients.findFirst({
       where: {
         username: {
-          endsWith: username,
+          equals: username,
           mode: "insensitive"
         }
       }
