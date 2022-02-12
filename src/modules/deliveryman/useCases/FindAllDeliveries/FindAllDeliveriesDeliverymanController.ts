@@ -8,7 +8,7 @@ export class FindAllDeliveriesDeliverymanController {
 
     const findAllDeliveriesDeliverymanCaseUse = new FindAllDeliveriesDeliverymanUseCase();
     
-    const result = findAllDeliveriesDeliverymanCaseUse.execute(id_deliveryman);
+    const result = await findAllDeliveriesDeliverymanCaseUse.execute(id_deliveryman);
 
     return response.status(201).json(result);
   }
